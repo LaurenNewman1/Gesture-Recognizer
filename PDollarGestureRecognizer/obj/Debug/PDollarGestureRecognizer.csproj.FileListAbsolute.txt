@@ -1,0 +1,6 @@
+C:\Users\laurn\Downloads\pdollar\$P\PDollarGestureRecognizer\bin\Debug\PDollarGestureRecognizer.dll
+C:\Users\laurn\Downloads\pdollar\$P\PDollarGestureRecognizer\bin\Debug\PDollarGestureRecognizer.pdb
+C:\Users\laurn\Downloads\pdollar\$P\PDollarGestureRecognizer\obj\Debug\PDollarGestureRecognizer.csproj.AssemblyReference.cache
+C:\Users\laurn\Downloads\pdollar\$P\PDollarGestureRecognizer\obj\Debug\PDollarGestureRecognizer.csproj.CoreCompileInputs.cache
+C:\Users\laurn\Downloads\pdollar\$P\PDollarGestureRecognizer\obj\Debug\PDollarGestureRecognizer.dll
+C:\Users\laurn\Downloads\pdollar\$P\PDollarGestureRecognizer\obj\Debug\PDollarGestureRecognizer.pdb

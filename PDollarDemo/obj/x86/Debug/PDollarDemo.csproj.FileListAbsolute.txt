@@ -1,0 +1,14 @@
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\bin\Debug\PDollarDemo.exe.config
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\bin\Debug\PDollarDemo.exe
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\bin\Debug\PDollarDemo.pdb
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\bin\Debug\PDollarGestureRecognizer.dll
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\bin\Debug\PDollarGestureRecognizer.pdb
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.csproj.AssemblyReference.cache
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.FormIntro.resources
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.FormMain.resources
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.Properties.Resources.resources
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.csproj.GenerateResource.cache
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.csproj.CoreCompileInputs.cache
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.csproj.CopyComplete
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.exe
+C:\Users\laurn\Downloads\pdollar\$P\PDollarDemo\obj\x86\Debug\PDollarDemo.pdb
