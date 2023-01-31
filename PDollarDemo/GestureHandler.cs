@@ -21,8 +21,9 @@ namespace PDollarDemo
             return gestures.ToArray();
         }
 
-        public static Gesture ReadEvent(string filename)
+        public static Gesture[] ReadEvent(string filename)
         {
+            List<Gesture> gestures = new List<Gesture>();
             List<Point> points = new List<Point>();
             string[] lines = File.ReadAllLines(filename);
             int currStrokeIndex = 0;
@@ -40,15 +41,22 @@ namespace PDollarDemo
                 {
                     currStrokeIndex++;
                 }
+                else if (line.Equals("RECOGNIZE"))
+                {
+                    gestures.Add(new Gesture(points.ToArray(), "unidentified gesture"));
+                    points.Clear();
+                }
             }
-            return new Gesture(points.ToArray(), "unidentified gesture");
+            return gestures.ToArray();
         }
 
         public static Gesture ReadGesture(string fileName)
         {
             List<Point> points = new List<Point>();
-            string[] lines = File.ReadAllLines(fileName);
+            string[] alllines = File.ReadAllLines(fileName);
+            string name = alllines[0];
             int currStrokeIndex = 0;
+            string[] lines = SubArray(alllines, 1, alllines.Length - 1);
             foreach (string line in lines)
             {
                 if (line.Contains(","))
@@ -64,7 +72,7 @@ namespace PDollarDemo
                     currStrokeIndex++;
                 }
             }
-            return new Gesture(points.ToArray(), formatGestureName(fileName));
+            return new Gesture(points.ToArray(), name);
         }
 
         public static string formatGestureName(string filename)
@@ -87,6 +95,13 @@ namespace PDollarDemo
                 filename = filename.Substring(i + 1, length - i - 1);
             }
             return filename;
+        }
+
+        public static string[] SubArray(string[] array, int offset, int length)
+        {
+            string[] result = new string[length];
+            Array.Copy(array, offset, result, 0, length);
+            return result;
         }
     }
 }

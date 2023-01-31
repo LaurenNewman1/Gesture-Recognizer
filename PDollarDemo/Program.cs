@@ -50,9 +50,12 @@ namespace PDollarDemo
             {
                 try
                 {
-                    Gesture candidate = GestureHandler.ReadEvent(args[0]);
-                    string classification = PointCloudRecognizer.Classify(candidate, trainingSet);
-                    Console.WriteLine("Gesture recognized: " + classification);
+                    Gesture[] candidates = GestureHandler.ReadEvent(args[0]);
+                    foreach (Gesture candidate in candidates)
+                    {
+                        string classification = PointCloudRecognizer.Classify(candidate, trainingSet);
+                        Console.WriteLine(classification);
+                    }
                 }
                 catch(Exception ex)
                 {
