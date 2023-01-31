@@ -58,6 +58,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestureHandler.cs" />
     <Compile Include="GestureIO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +79,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="makefile" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,6 +89,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="multistrokes.gif" />
@@ -96,6 +99,16 @@
       <Project>{19428BB1-E0E6-409E-A488-91A9CA731555}</Project>
       <Name>PDollarGestureRecognizer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eventfiles\arrowhead_eventfile.txt" />
+    <Content Include="eventfiles\exclamation_point_eventfile.txt" />
+    <Content Include="eventfiles\five_point_star_eventfile.txt" />
+    <Content Include="eventfiles\sample_eventfile.txt" />
+    <Content Include="gesturefiles\arrowhead.txt" />
+    <Content Include="gesturefiles\exclamation_point.txt" />
+    <Content Include="gesturefiles\five_point_star.txt" />
+    <Content Include="test.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

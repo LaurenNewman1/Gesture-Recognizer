@@ -32,7 +32,7 @@ namespace PDollarDemo
                 {
                     points.Add(new Point(
                         float.Parse(line.Substring(0, line.IndexOf(','))),
-                        float.Parse(line.Substring(line.IndexOf(' ') + 1, line.Length)),
+                        float.Parse(line.Substring(line.IndexOf(' ') + 1, line.Length - line.IndexOf(','))),
                         currStrokeIndex
                     ));
                 }
@@ -55,7 +55,7 @@ namespace PDollarDemo
                 {
                     points.Add(new Point(
                         float.Parse(line.Substring(0, line.IndexOf(','))),
-                        float.Parse(line.Substring(line.IndexOf(' ') + 1, line.Length)),
+                        float.Parse(line.Substring(line.IndexOf(' ') + 1, line.Length - line.IndexOf(','))),
                         currStrokeIndex
                     ));
                 }
@@ -64,7 +64,29 @@ namespace PDollarDemo
                     currStrokeIndex++;
                 }
             }
-            return new Gesture(points.ToArray(), fileName.Substring(0, fileName.Length - 4));
+            return new Gesture(points.ToArray(), formatGestureName(fileName));
+        }
+
+        public static string formatGestureName(string filename)
+        {
+            if (filename.Contains("."))
+            {
+                int i = filename.IndexOf('.');
+                filename = filename.Substring(0, i);
+            }
+            while (filename.Contains("/"))
+            {
+                int length = filename.Length;
+                int i = filename.IndexOf('/');
+                filename = filename.Substring(i + 1, length - i - 1);
+            }
+            while (filename.Contains("\\"))
+            {
+                int length = filename.Length;
+                int i = filename.IndexOf('\\');
+                filename = filename.Substring(i + 1, length - i - 1);
+            }
+            return filename;
         }
     }
 }

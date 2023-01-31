@@ -15,24 +15,17 @@ namespace PDollarDemo
         static void Main(string[] args)
         {
             trainingSet = GestureHandler.LoadTrainingSet();
-            if (args.Length == 0)
-            {
-                Console.WriteLine("Help: Use one of the following formats");
-                Console.WriteLine("pdollar –t <gesturefile>");
-                Console.WriteLine("pdollar -r");
-                Console.WriteLine("pdollar <eventstream>");
-            }
-            else if (args.Length == 2 && args[0] == "-t")
+            if (args.Length == 2 && args[0] == "-t")
             {
                 try
                 {
-                    System.IO.File.Copy(args[1], "gesturefiles/" + args[1], true);
+                    System.IO.File.Copy(args[1], "gesturefiles/" + GestureHandler.formatGestureName(args[1]) + ".txt", true);
                     trainingSet = GestureHandler.LoadTrainingSet();
                     Console.WriteLine(args[1] + " has been added to the gesture files.");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Failed. Make sure the gesture file you want to add is in the main folder.");
+                    Console.WriteLine("Failed. Make sure the gesture file you want to add is in the main folder or that you include the relative path.");
                 }
             }
             else if (args.Length == 1 && args[0] == "-r")
@@ -63,7 +56,7 @@ namespace PDollarDemo
                 }
                 catch(Exception ex)
                 {
-                    Console.WriteLine("Failed. Make sure your event file is in the main folder.");
+                    Console.WriteLine("Failed. Make sure your event file is in the main folder or that you include the relative path.");
                 }
             }
             else
